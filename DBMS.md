@@ -300,11 +300,10 @@ explicitly listed.
 
 #### Key Constraints
 
-* Superkey (SK) of Relation: It is a set of attributes as
-• No two tuples in any valid relation state r(R) will have the same value for SK
+Superkey (SK) of Relation: It is a set of attributes as
+• No two tuples in any valid relation state  will have the same value for super key
 
-* Key of R:
-• A "minimal" superkey
+* Key of Relation:
 • That is, a key is a superkey K such that the removal of any attribute from K results in
 a set of attributes that is not a superkey (does not possess the super key
 uniqueness property)
@@ -316,21 +315,13 @@ uniqueness property)
 
 • The primary key attributes PK of each relation schema cannot have null values in any tuple.
 
-• This is because primary key values are used to identify the individual tuples.
-
-• If PK has several attributes, null is not allowed in any of these attributes.
-
-• Note: Other attributes of Relation may be constrained to disallow null values, even though they are not members of the primary key.
+• Note: Other attributes of Relation may be constrained to disallow null values.
 
 #### Referential Integrity
 
-• Tuples in the referencing relation R1 have attributes FK (called foreign
-key attributes) that reference the primary key attributes PK of the
-other referenced relation R2.
+• The primary key attributes (PK) of the second referred relation (R2) are referenced by tuples in the referencing relation R1 through attributes FK, also known as foreign key attributes.
 
-• A tuple t1 in Relation 1 is said to reference a tuple t2  in Relation 2 if t1[FK] = t2[PK].
-• The value in the foreign key column (or columns) FK of the referencing relation
-can be either:
+• The following values can be found in the foreign key column (or columns) FK of the referring relation:
 
 1.  a value of an existing primary key value of a corresponding primary key
 PK in the referenced relation R2, or
